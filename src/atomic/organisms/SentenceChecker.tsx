@@ -31,6 +31,7 @@ export const SentenceChecker = () => {
   const [currentSentence, setCurrentSentence] = useState('');
   const [checkResponse, setCheckResponse] = useState<ResponseWrapper<string[]>>({ state: ResponseState.STALE });
   useEffect(() => {
+    if (currentSentence === '') return;
     const subscription = checkSentence(currentSentence).subscribe(response => setCheckResponse(response));
     return () => subscription.unsubscribe();
   }, [currentSentence]);
