@@ -21,7 +21,7 @@ export const checkSentence = (sentence: string) => {
         state: ResponseState.SUCCESS,
         result: res.data
       })
-    }).catch(e => {
+    }).catch(() => {
       subscriber.next({
         state: ResponseState.ERROR
       })
