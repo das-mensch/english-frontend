@@ -46,5 +46,8 @@ export const SentenceChecker = () => {
     {checkResponse.state === ResponseState.SUCCESS && checkResponse.result && checkResponse.result.length === 0 && <>
       <p>Congrats! This sentence is composed out of valid words only. However, that doesn't mean it is grammatically correct.</p>
     </>}
+    {checkResponse.state === ResponseState.ERROR && <>
+      <p>Oh snap! An error occurred. Please try again.</p>
+    </>}
   </StyledTextAreaWithButton>
 }
