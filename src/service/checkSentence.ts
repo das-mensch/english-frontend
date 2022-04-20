@@ -8,7 +8,9 @@ export const checkSentence = (sentence: string) => {
       state: ResponseState.PENDING
     });
     axios.post<string[]>(
-      'http://localhost/v1/check',
+      process.env.NODE_ENV !== 'production'
+        ? 'http://localhost/v1/check'
+        : 'https://das-mensch-english-backend.herokuapp.com/v1/check',
       sentence,
       {
         headers: {
