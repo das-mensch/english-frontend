@@ -1,7 +1,19 @@
+@font-face {
+  font-family: 'Personified UX';
+  src: url(./fonts/PersonifiedUXRegular.ttf) format('truetype');
+}
+
 html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Personified UX', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  padding: 0.5rem;
+}
+
+body {
+  background-image:
+    linear-gradient(135deg, transparent 0%, transparent 35%, #a40000 65%, #a40000 100%),
+    radial-gradient(black 0.25rem, #a40000 0.25rem);
+  background-size: cover, 1rem 1rem, 1rem 1rem;
+  background-position: center, 0 0;
 }
