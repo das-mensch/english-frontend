@@ -22,13 +22,13 @@ export const checkSentence = (sentence: string) => {
       subscriber.next({
         state: ResponseState.SUCCESS,
         result: res.data
-      })
+      });
     }).catch(() => {
       subscriber.next({
         state: ResponseState.ERROR
-      })
+      });
     }).finally(() => {
       subscriber.complete();
     });
   });
-}
+};
