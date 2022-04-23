@@ -1,3 +1,10 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+  font-family: inherit;
+`;
+
 type ButtonProps = {
   onClick: () => void;
   isDisabled?: boolean;
@@ -7,6 +14,6 @@ type ButtonProps = {
 export const Button = (props: ButtonProps) => {
   const { onClick, text, isDisabled } = props;
   return (
-    <button disabled={isDisabled} onClick={() => onClick()}>{text}</button>
-  )
-}
+    <StyledButton disabled={isDisabled} onClick={() => onClick()}>{text}</StyledButton>
+  );
+};
